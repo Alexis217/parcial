@@ -24,19 +24,19 @@ class Notebook implements Equipos {
 }
 
 class EquipoFactory {
-    crearProducto(tipo: string, datos: { nombre: string; ram: string , procesador:string }): Equipos {
+    crearProducto(tipo: string, nombre: string, ram:string, procesador:string): Equipos {
         if (tipo === "Servidor") {
-            return new Servidor(datos.nombre, datos.ram, datos.procesador);
+            return new Servidor(nombre,ram,procesador);
         } else if (tipo === "Desktop") {
-            return new Desktop(datos.nombre, datos.ram, datos.procesador);
+            return new Desktop(nombre,ram,procesador);
         }
         if (tipo === "Notebook") {
-            return new Notebook(datos.nombre, datos.ram, datos.procesador)
+            return new Notebook(nombre,ram,procesador)
         }
         throw new Error("Tipo de producto no soportado");
     }
 }
 
 const factory = new EquipoFactory();
-const server = factory.crearProducto("Servidor", { nombre: "Dell PowerEdge", ram: "32GB", procesador: "Xenon" });
+const server = factory.crearProducto("Servidor", "Dell PowerEdge con", "32GB RAM", "y procesador Xenon");
 server.operacion();
