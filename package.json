@@ -1,0 +1,19 @@
+{
+  "name": "parcial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "Singleton": "tsx  src/singleton.ts",
+    "Factory": "tsx src/factory.ts",
+    "Observer": "tsx src/observer.ts",
+    "Adapter": "tsx src/adapter.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "tsx": "^4.20.5"
+  }
+}
